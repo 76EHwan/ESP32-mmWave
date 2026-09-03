@@ -1,325 +1,327 @@
 #include <Arduino.h>
 #include "DFRobot_HumanDetection.h"
+#include "C1001Passive.h"
+#include "DrowsyDetector.h"
+
+// ============================================================================
+//  C1001 수신 전용 구조
+//
+//  초기화(모드 전환, LED, 리셋)만 벤더 라이브러리로 하고, 그 뒤 UART 는
+//  C1001Passive 가 전담한다. loop() 는 블로킹 없이 돌면서 올라오는 프레임을
+//  소화하고 1초에 한 번 상태를 찍는다.
+//
+//  출력의 괄호 안은 (마지막 갱신 이후 경과, 갱신 간격의 이동평균) 이다.
+//  이 간격이 센서가 그 항목을 실제로 얼마나 자주 올리는지 그대로 보여준다.
+//  presence 처럼 값이 바뀔 때만 올라오는 항목은 간격이 크게 벌어진다.
+//
+//  모듈이 능동 보고를 하지 않는 설정이면 프레임이 안 올라온다. 그때는
+//  SILENT_MS 뒤부터 질의를 하나씩 넣어 (nudge) 응답을 같은 파서로 받는다.
+// ============================================================================
+
+#define PIN_RX      16      // 센서 TX -> ESP32 RX
+#define PIN_TX      17      // 센서 RX <- ESP32 TX
+
+#define PRINT_MS    1000    // 상태 출력 주기
+#define SILENT_MS   2000    // 이만큼 프레임이 없으면 질의로 깨운다
+#define NUDGE_MS    200     // 질의 간격
+
+#define DUMP_QUIET_MS 400   // 리셋 직후 덤프가 끝났다고 볼 무음 구간
+#define DUMP_MAX_MS   5000  // 덤프 대기 상한
+
+// 보고 모드 실험용. -1 이면 건드리지 않는다 (모듈 기본값 1로 관측됨).
+// 0 = 실시간 보고, 1 = 수면 보고.
+// 수면 보고 모드에서는 재/이석(inBed) 판정이 서야 호흡·심박이 나오는 것으로
+// 보이므로, 앉은 자세에서 값이 안 나오면 0 으로 바꿔 시험해 볼 수 있다
+#define REPORT_MODE   0
 
 DFRobot_HumanDetection hu(&Serial1);
+C1001Passive radar(Serial1);
+DrowsyDetector drowsy;
 
-// ============================================================================
-//  책상에 앉은 사람의 졸음 감지 (Sleep 모드)
-//
-//  실측으로 확인된 제약
-//   - 센서 내장 수면 판정은 못 쓴다. 앉은 자세는 inBed=0 이라 전 필드가 0으로 온다.
-//   - 엎드리면 가슴이 가려져 호흡·심박이 끊긴다. 이건 자세 그 자체의 지표다.
-//   - 심박은 체동 1회에 66->125까지 튀고 복구에 1~2분 걸린다. 순간값은 쓸 수 없다.
-//   - HRV는 불가능하다. 정수 bpm이 약 3.4초마다 갱신될 뿐 박동 간격을 주지 않는다.
-//
-//  판정 구조
-//   주 신호 : 체동 이동평균이 낮게 유지  (이것 없이는 졸음으로 보지 않는다)
-//   보조 증거 (1) 사람은 있는데 호흡이 안 잡힘  -> 엎드린 자세
-//   보조 증거 (2) 심박 중앙값이 각성 기준선보다 하락
-//   증거가 많을수록 확정에 필요한 지속 시간이 짧아진다.
-//
-//  자세 판별은 추후 VL53L9가 담당한다. 여기서는 자세를 추정하지 않는다.
-// ============================================================================
+// ---------------------------------------------------------------------------
+//  구간 통계. 임계값(MOVE_QUIET_MAX, HR_DROP_BPM)을 실측으로 맞추기 위한 것이다.
+//  모니터에서 문자를 보내면 그 시점에 마커가 찍히고 통계가 리셋되므로,
+//  "지금부터 가만히 있는다" 같은 구간을 나눠 각각의 분포를 볼 수 있다
+// ---------------------------------------------------------------------------
+struct Stats {
+    uint32_t n = 0;
+    uint32_t startMs = 0;
+    float    mAvgMin = 1e9f, mAvgMax = 0.0f, mAvgSum = 0.0f;
+    uint16_t bodyMin = 65535, bodyMax = 0;
+    uint32_t bodySum = 0, bodyN = 0, bodyCount = 0;
+    float    dropMin = 1e9f, dropMax = -1e9f;
+    uint32_t dropN = 0;
+    uint16_t medMin = 65535, medMax = 0;
+    uint32_t stateTicks[5] = {0, 0, 0, 0, 0};   // NOPERSON/NOLOCK/WARMUP/AWAKE/DROWSY
 
-#define INVALID_U8          0xff    // 라이브러리가 통신 실패 시 돌려주는 값
-#define RESP_STATE_NONE     4       // getBreatheState: 호흡 없음
-
-// --- 체동 ---
-#define MOVE_TAU            15.0    // 체동 이동평균 시정수 [초]
-#define MOVE_QUIET_MAX      4.0     // 이 아래면 "거의 안 움직임"
-#define MOVE_SPIKE          20      // 이 값을 넘으면 실제 움직임 이벤트로 본다
-
-// --- 심박 ---
-#define HR_MIN              40      // 유효 심박 하한
-#define HR_MAX              150     // 유효 심박 상한
-#define HR_BLANK_MS         90000   // 체동 이벤트 후 심박을 버릴 시간.
-                                    // 센서 추정기가 다시 수렴하는 데 1~2분 걸린다
-#define HR_WIN_MS           120000  // 단기 중앙값을 낼 창 [ms]
-#define HR_WIN_N            128     // 링버퍼 크기
-#define HR_WIN_MIN_N        10      // 중앙값을 신뢰할 최소 샘플 수
-#define HR_BASE_TAU         600.0   // 각성 기준선 시정수 [초]
-#define HR_DROP_BPM         4.0     // 기준선 대비 이만큼 떨어지면 졸음 징후
-
-// --- 확정 시간 (증거 개수에 따라 달라진다) ---
-#define HOLD_NO_EVIDENCE_MS 180000  // 체동만 (3분)
-#define HOLD_ONE_MS         90000   // 증거 1개 (1분 30초)
-#define HOLD_TWO_MS         60000   // 증거 2개 (1분)
-#define AWAKE_HOLD_MS       10000   // 징후가 이만큼 사라져야 각성으로 되돌린다
-
-#define SUMMARY_AT_MS       1800000 // 부팅 후 이 시각에 요약을 한 번 출력한다 (30분)
-
-float moveAvg = 0.0;                // 체동 이동평균
-uint32_t lastEmaMs = 0;             // 이동평균 갱신 시각
-uint32_t hrBlankUntil = 0;          // 이 시각까지 심박을 버린다
-
-uint8_t  hrBuf[HR_WIN_N];           // 심박 링버퍼 (값)
-uint32_t hrTime[HR_WIN_N];          // 심박 링버퍼 (수집 시각)
-uint8_t  hrHead = 0;                // 다음에 쓸 위치
-uint8_t  hrFill = 0;                // 채워진 개수
-
-float hrBase = 0.0;                 // 각성 시 심박 기준선
-uint32_t lastBaseMs = 0;            // 기준선 갱신 시각
-
-bool drowsy = false;                // 현재 졸음 판정
-uint32_t signSince = 0;             // 현재 징후 상태가 시작된 시각
-bool prevSign = false;              // 직전 주기의 징후 여부
-
-// --- 30분 요약용 누적 통계 ---
-bool summaryDone = false;           // 요약을 이미 냈는지
-uint32_t statCycles = 0;            // 전체 주기 수
-uint32_t statPresent = 0;           // presence==1 이었던 주기 수
-uint32_t statStill = 0;             // still 이었던 주기 수
-uint32_t statBlank = 0;             // 심박 blanking 이었던 주기 수
-float statMoveMin = 1e9, statMoveMax = 0, statMoveSum = 0;
-uint8_t statHrMin = 255, statHrMax = 0;
-uint32_t statHrSum = 0, statHrN = 0;
-
-// 링버퍼에 심박 샘플을 넣는다
-void hrPush(uint8_t v, uint32_t t) {
-  hrBuf[hrHead] = v;
-  hrTime[hrHead] = t;
-  hrHead = (hrHead + 1) % HR_WIN_N;
-  if (hrFill < HR_WIN_N) hrFill++;
-}
-
-// 최근 HR_WIN_MS 안의 샘플들로 중앙값을 낸다.
-// 샘플이 부족하면 0을 반환한다. count 에는 사용된 샘플 수가 담긴다
-uint8_t hrMedian(uint32_t now, uint8_t *count) {
-  uint8_t tmp[HR_WIN_N];
-  uint8_t n = 0;
-
-  for (uint8_t i = 0; i < hrFill; i++) {
-    if ((now - hrTime[i]) <= HR_WIN_MS) {
-      tmp[n++] = hrBuf[i];
+    void reset(uint32_t now) {
+        uint32_t keep = bodyCount;
+        *this = Stats();
+        bodyCount = keep;
+        startMs = now;
     }
-  }
-  *count = n;
-  if (n < HR_WIN_MIN_N) return 0;
+};
+static Stats stats;
+static char  markLabel = '-';
 
-  for (uint8_t i = 1; i < n; i++) {          // 삽입 정렬
-    uint8_t key = tmp[i];
-    int16_t j = i - 1;
-    while (j >= 0 && tmp[j] > key) {
-      tmp[j + 1] = tmp[j];
-      j--;
+static void printSummary(uint32_t now)
+{
+    Serial.println("#");
+    Serial.print("# ===== SEGMENT '");
+    Serial.print(markLabel);
+    Serial.print("'  ");
+    Serial.print((now - stats.startMs) / 1000);
+    Serial.print("s, ");
+    Serial.print(stats.n);
+    Serial.println(" ticks =====");
+
+    if (stats.n == 0) { Serial.println("# (no data)"); return; }
+
+    Serial.print("# state  NOPERSON/NOLOCK/WARMUP/AWAKE/DROWSY = ");
+    for (uint8_t i = 0; i < 5; i++) {
+        Serial.print(100UL * stats.stateTicks[i] / stats.n);
+        Serial.print(i < 4 ? "/" : "%\n");
     }
-    tmp[j + 1] = key;
-  }
-  return tmp[n / 2];
+
+    Serial.print("# body   min/mean/max = ");
+    if (stats.bodyN) {
+        Serial.print(stats.bodyMin); Serial.print(" / ");
+        Serial.print(stats.bodySum / stats.bodyN); Serial.print(" / ");
+        Serial.println(stats.bodyMax);
+    } else Serial.println("(none)");
+
+    Serial.print("# mAvg   min/mean/max = ");
+    Serial.print(stats.mAvgMin, 2); Serial.print(" / ");
+    Serial.print(stats.mAvgSum / stats.n, 2); Serial.print(" / ");
+    Serial.println(stats.mAvgMax, 2);
+    Serial.print("#        임계 MOVE_QUIET_MAX = ");
+    Serial.println(MOVE_QUIET_MAX, 1);
+
+    Serial.print("# blank  ");
+    Serial.print(drowsy.blankPercent());
+    Serial.println("%  (100 이면 MOVE_SPIKE 가 낮다)");
+
+    Serial.print("# hrMed  min/max = ");
+    if (stats.medMax) {
+        Serial.print(stats.medMin); Serial.print(" / "); Serial.println(stats.medMax);
+    } else Serial.println("(표본 부족)");
+
+    Serial.print("# base   "); Serial.println(drowsy.hrBase(), 2);
+    Serial.print("# drop   min/max = ");
+    if (stats.dropN) {
+        Serial.print(stats.dropMin, 2); Serial.print(" / "); Serial.println(stats.dropMax, 2);
+    } else Serial.println("(표본 부족)");
+    Serial.print("#        임계 HR_DROP_BPM = ");
+    Serial.println(HR_DROP_BPM, 1);
+    Serial.println("# ==========================================");
+    Serial.println("#");
 }
 
-// 누적 통계를 사람이 읽을 수 있는 형태로 출력한다.
-// 모든 줄을 # 로 시작해 CSV 파서가 주석으로 건너뛸 수 있게 한다
-void printSummary(uint32_t now) {
-  Serial.println("#");
-  Serial.println("# ================ SUMMARY ================");
-  Serial.print("# elapsed        : "); Serial.print(now / 1000); Serial.println(" s");
-  Serial.print("# cycles         : "); Serial.println(statCycles);
-  if (statCycles == 0) { Serial.println("# (no data)"); return; }
+// 모니터에서 보낸 문자를 처리한다.
+//   s        요약 출력 (통계는 유지)
+//   그 외    마커를 찍고 통계를 리셋한다. 구간 라벨로 쓴다
+static void handleInput(uint32_t now)
+{
+    while (Serial.available() > 0) {
+        char c = (char)Serial.read();
+        if (c == '\n' || c == '\r') continue;
 
-  Serial.print("# presence ratio : ");
-  Serial.print(100.0 * statPresent / statCycles, 1); Serial.println(" %");
-  Serial.print("# still ratio    : ");
-  Serial.print(100.0 * statStill / statCycles, 1); Serial.println(" %");
-  Serial.print("# hr blank ratio : ");
-  Serial.print(100.0 * statBlank / statCycles, 1); Serial.println(" %");
+        if (c == 's' || c == 'S') {
+            printSummary(now);
+        } else {
+            // 같은 마커가 연속으로 들어오면 (모니터가 줄을 여러 번 보내는 경우)
+            // 빈 구간 요약이 줄줄이 찍히므로 무시한다
+            if (stats.n == 0 && c == markLabel) continue;
 
-  Serial.println("#");
-  Serial.println("# --- move avg (체동 이동평균) ---");
-  Serial.print("#   min / mean / max : ");
-  Serial.print(statMoveMin, 2); Serial.print(" / ");
-  Serial.print(statMoveSum / statCycles, 2); Serial.print(" / ");
-  Serial.println(statMoveMax, 2);
-  Serial.print("#   현재 임계값 MOVE_QUIET_MAX = "); Serial.println(MOVE_QUIET_MAX, 1);
-
-  Serial.println("#");
-  Serial.println("# --- heart rate median (2분 창) ---");
-  if (statHrN == 0) {
-    Serial.println("#   유효 샘플 없음. 심박 증거는 사용 불가");
-  } else {
-    Serial.print("#   samples          : "); Serial.println(statHrN);
-    Serial.print("#   min / mean / max : ");
-    Serial.print(statHrMin); Serial.print(" / ");
-    Serial.print((float)statHrSum / statHrN, 1); Serial.print(" / ");
-    Serial.println(statHrMax);
-    Serial.print("#   baseline         : "); Serial.println(hrBase, 2);
-    Serial.print("#   현재 임계값 HR_DROP_BPM = "); Serial.println(HR_DROP_BPM, 1);
-  }
-  Serial.println("# =========================================");
-  Serial.println("#");
-}
-
-void setup() {
-  Serial.begin(115200);
-
-  // ESP32 하드웨어 시리얼 핀 설정
-  Serial1.begin(115200, SERIAL_8N1, 16, 17);
-
-  Serial.println("Start initialization");
-  while (hu.begin() != 0) {
-    Serial.println("init error!!!");
-    delay(1000);
-  }
-  Serial.println("Initialization successful");
-
-  Serial.println("Start switching work mode");
-  while (hu.configWorkMode(hu.eSleepMode) != 0) {
-    Serial.println("error!!!");
-    delay(1000);
-  }
-  Serial.println("Work mode switch successful");
-
-  hu.configLEDLight(hu.eHPLed, 1);
-  hu.sensorRet();
-
-  uint32_t now = millis();
-  lastEmaMs = now;
-  lastBaseMs = now;
-  signSince = now;
-  // CSV 헤더. # 로 시작하는 줄은 주석이다
-  Serial.println("#");
-  Serial.println("# 아무 문자나 보내면 그 시점에 마커가 찍힙니다 (자세 바꾸기 직전에 누르세요)");
-  Serial.println("# s 를 보내면 요약을 즉시 출력합니다");
-  Serial.println("t_s,presence,move,moveAvg,resp,respState,hrRaw,hrMed,hrN,hrBase,hrDrop,blank,still,respLost,hrDown,ev,signS,needS,state,readMs,cycleMs");
-}
-
-void loop() {
-  static uint32_t lastCycle = 0;
-  uint32_t cycleStart = millis();
-  uint32_t period = (lastCycle == 0) ? 0 : (cycleStart - lastCycle);
-  lastCycle = cycleStart;
-
-  // --- 센서 읽기 ---
-  uint16_t presence    = hu.smHumanData(hu.eHumanPresence);
-  uint16_t movingRange = hu.smHumanData(hu.eHumanMovingRange);
-  uint8_t  resp        = hu.getBreatheValue();
-  uint8_t  respState   = hu.getBreatheState();   // 1=정상 2=너무빠름 3=너무느림 4=없음
-  uint8_t  rawHR       = hu.getHeartRate();
-
-  uint32_t now = millis();
-
-  // --- 체동 이동평균 (루프 주기와 무관하게 시간 기반) ---
-  float dt = (now - lastEmaMs) / 1000.0;
-  lastEmaMs = now;
-  moveAvg += (dt / (MOVE_TAU + dt)) * (movingRange - moveAvg);
-
-  // --- 심박 수집 ---
-  // 체동 스파이크 뒤에는 센서 추정기가 흔들린 채로 남으므로 통째로 버린다
-  if (movingRange > MOVE_SPIKE) {
-    hrBlankUntil = now + HR_BLANK_MS;
-  }
-  bool hrBlanking = ((int32_t)(hrBlankUntil - now) > 0);
-
-  bool hrOk = (rawHR != INVALID_U8) && (rawHR >= HR_MIN) && (rawHR <= HR_MAX);
-  if (hrOk && !hrBlanking && presence == 1) {
-    hrPush(rawHR, now);
-  }
-
-  uint8_t hrCount = 0;
-  uint8_t hrMed = hrMedian(now, &hrCount);
-
-  // --- 심박 기준선 ---
-  // 각성 상태에서만 갱신해야 졸기 시작한 뒤의 낮은 심박이 기준선을 끌어내리지 않는다
-  float dtBase = (now - lastBaseMs) / 1000.0;
-  lastBaseMs = now;
-  if (hrMed > 0) {
-    if (hrBase == 0.0) {
-      hrBase = hrMed;
-    } else if (!drowsy) {
-      hrBase += (dtBase / (HR_BASE_TAU + dtBase)) * (hrMed - hrBase);
+            if (stats.n) printSummary(now);   // 직전 구간을 먼저 마무리하고
+            markLabel = c;
+            stats.reset(now);
+            Serial.print("# MARK '");
+            Serial.print(c);
+            Serial.print("' t=");
+            Serial.print((now - radar.startMs) / 1000);
+            Serial.println("s  (새 구간 시작)");
+        }
     }
-  }
-  float hrDrop = (hrBase > 0.0 && hrMed > 0) ? (hrBase - hrMed) : 0.0;
+}
 
-  // --- 판정 ---
-  bool present = (presence == 1);
-  bool still   = (moveAvg < MOVE_QUIET_MAX);            // 주 신호
+void setup()
+{
+    Serial.begin(115200);
 
-  // 보조 증거 (1) 사람은 있는데 호흡이 안 잡힌다 = 가슴이 가려진 자세
-  bool respLost = present && (resp == 0 || respState == RESP_STATE_NONE);
-  // 보조 증거 (2) 심박 중앙값이 기준선보다 유의하게 낮다
-  bool hrDown   = (hrMed > 0) && (hrDrop >= HR_DROP_BPM);
+    // 능동 보고를 놓치지 않도록 수신 버퍼를 키운다. begin() 앞에서 해야 적용된다
+    Serial1.setRxBufferSize(1024);
+    Serial1.begin(115200, SERIAL_8N1, PIN_RX, PIN_TX);
 
-  uint8_t evidence = (respLost ? 1 : 0) + (hrDown ? 1 : 0);
-  bool sign = present && still;                          // 체동 없이는 판정하지 않는다
+    Serial.println("# Start initialization");
+    while (hu.begin() != 0) {
+        Serial.println("# init error!!!");
+        delay(1000);
+    }
+    Serial.println("# Initialization successful");
 
-  if (sign != prevSign) {
-    prevSign = sign;
-    signSince = now;
-  }
-  uint32_t signMs = now - signSince;
+    Serial.println("# Start switching work mode");
+    while (hu.configWorkMode(hu.eSleepMode) != 0) {
+        Serial.println("# mode error!!!");
+        delay(1000);
+    }
+    Serial.println("# Work mode switch successful");
 
-  uint32_t needMs = (evidence >= 2) ? HOLD_TWO_MS
-                  : (evidence == 1) ? HOLD_ONE_MS
-                                    : HOLD_NO_EVIDENCE_MS;
+    hu.configLEDLight(hu.eHPLed, 1);
 
-  if (!drowsy && sign && signMs >= needMs) {
-    drowsy = true;
-  } else if (drowsy && !sign && signMs >= AWAKE_HOLD_MS) {
-    drowsy = false;
-  }
+#if REPORT_MODE >= 0
+    Serial.print("# set reporting mode = ");
+    Serial.println(REPORT_MODE);
+    hu.configSleep(hu.eReportingmodeC, REPORT_MODE);
+#endif
 
-  // --- 누적 통계 ---
-  statCycles++;
-  if (present) statPresent++;
-  if (still) statStill++;
-  if (hrBlanking) statBlank++;
-  if (moveAvg < statMoveMin) statMoveMin = moveAvg;
-  if (moveAvg > statMoveMax) statMoveMax = moveAvg;
-  statMoveSum += moveAvg;
-  if (hrMed > 0) {
-    if (hrMed < statHrMin) statHrMin = hrMed;
-    if (hrMed > statHrMax) statHrMax = hrMed;
-    statHrSum += hrMed;
-    statHrN++;
-  }
+    hu.sensorRet();     // 설정 후 리셋. 내부에서 10초 대기한다
 
-  // --- 구간 표시 ---
-  // 시리얼 모니터에서 아무 문자나 보내면 그 시점에 마커가 찍힌다.
-  // 자세를 바꾸기 직전에 눌러 두면 나중에 로그에서 구간을 나눌 수 있다.
-  // 's' 를 보내면 요약을 즉시 출력한다.
-  while (Serial.available() > 0) {
-    char c = Serial.read();
-    if (c == '\n' || c == '\r') continue;
-    if (c == 's' || c == 'S') {
-      printSummary(now);
+    // 여기부터 UART 는 파서가 가져간다. 이후 hu 는 쓰지 않는다
+    radar.begin();
+
+    // 모듈은 리셋 직후 전체 상태를 한꺼번에 쏟아낸다 (실측 58프레임/0.1초).
+    // 이 덤프를 갱신 주기 통계에 섞으면 간격이 엉뚱하게 짧게 나오므로,
+    // 덤프를 먼저 받아 값만 챙기고 통계는 다시 0에서 시작한다
+    uint32_t t0 = millis();
+    while ((millis() - t0) < DUMP_MAX_MS) {
+        radar.poll();
+        if ((millis() - radar.lastFrameMs) > DUMP_QUIET_MS) break;
+    }
+    uint32_t dumpFrames = radar.frames;
+    radar.begin();
+    drowsy.begin(millis());
+
+    Serial.println("#");
+    Serial.print("# module fw=");
+    Serial.print(radar.fwVersion);
+    Serial.print(" hw=");
+    Serial.print(radar.hwModel);
+    Serial.print(" sn=");
+    Serial.println(radar.serialNo);
+    Serial.print("# boot dump frames=");
+    Serial.println(dumpFrames);
+    Serial.println("# passive parser start");
+    Serial.println("# 아무 문자나 보내면 그 시점에 마커가 찍히고 구간 통계가 리셋됩니다");
+    Serial.println("# s 를 보내면 현재 구간 요약을 출력합니다");
+    Serial.println("#");
+    stats.reset(millis());
+}
+
+void loop()
+{
+    radar.poll();                       // 논블로킹. 밀린 바이트를 전부 소화한다
+
+    uint32_t now = millis();
+    drowsy.update(radar, now);          // 새로 갱신된 샘플만 소비한다
+
+    // 능동 보고가 없는 설정이면 질의로 폴백한다
+    static uint32_t lastNudge = 0;
+    if ((now - radar.lastFrameMs) > SILENT_MS && (now - lastNudge) >= NUDGE_MS) {
+        radar.nudge();
+        lastNudge = now;
+    }
+
+    handleInput(now);
+
+    static uint32_t lastPrint = 0;
+    if ((now - lastPrint) < PRINT_MS) return;
+    lastPrint += PRINT_MS;
+    if ((now - lastPrint) > PRINT_MS) lastPrint = now;   // 너무 밀렸으면 재동기
+
+    // --- 구간 통계 누적 ---
+    stats.n++;
+    stats.stateTicks[drowsy.state()]++;
+    float ma = drowsy.moveAvg();
+    if (ma < stats.mAvgMin) stats.mAvgMin = ma;
+    if (ma > stats.mAvgMax) stats.mAvgMax = ma;
+    stats.mAvgSum += ma;
+
+    if (radar.bodyMove.count != stats.bodyCount) {   // 새 샘플만 센다
+        stats.bodyCount = radar.bodyMove.count;
+        uint16_t b = radar.bodyMove.value;
+        if (b < stats.bodyMin) stats.bodyMin = b;
+        if (b > stats.bodyMax) stats.bodyMax = b;
+        stats.bodySum += b;
+        stats.bodyN++;
+    }
+
+    uint8_t medNow = drowsy.hrMedian(now);
+    if (medNow) {
+        if (medNow < stats.medMin) stats.medMin = medNow;
+        if (medNow > stats.medMax) stats.medMax = medNow;
+        float dr = drowsy.hrDrop(now);
+        if (dr < stats.dropMin) stats.dropMin = dr;
+        if (dr > stats.dropMax) stats.dropMax = dr;
+        stats.dropN++;
+    }
+
+    // 파형(0x81/0x05, 0x85/0x05)은 부팅 덤프에서만 오고 스트리밍되지 않는 것으로
+    // 확인돼 출력에서 뺐다. 필드 자체는 파서에 남아 있다
+    Serial.print('[');
+    Serial.print((now - radar.startMs) / 1000.0, 1);
+    Serial.print("s ");
+    Serial.print(markLabel);
+    Serial.print("] ");
+    Serial.print(drowsy.stateName());
+    Serial.print(' ');
+
+    Serial.print("pres=");   Serial.print(radar.presence.value);
+    Serial.print(" body=");  Serial.print(radar.bodyMove.value);
+    Serial.print(" mAvg=");  Serial.print(drowsy.moveAvg(), 2);
+    Serial.print(" dist=");  Serial.print(radar.distance.value);
+    Serial.print(" bed=");   Serial.print(radar.inBed.value);
+    Serial.print(" lock=");  Serial.print(drowsy.locked() ? 1 : 0);
+    Serial.print(" resp=");  Serial.print(radar.respRate.value);
+    Serial.print("/st");     Serial.print(radar.respState.value);
+    Serial.print(" hr=");    Serial.print(radar.heartRate.value);
+
+    uint8_t med = drowsy.hrMedian(now);
+    Serial.print(" med=");
+    if (med) Serial.print(med); else Serial.print("--");
+    Serial.print("/");       Serial.print(drowsy.hrSamples(now));
+    Serial.print(" base=");
+    if (drowsy.hrBase() > 0.0f) {
+        Serial.print(drowsy.hrBase(), 1);
     } else {
-      Serial.print("# MARK ");
-      Serial.print(c);
-      Serial.print(" t=");
-      Serial.println(now / 1000);
+        // 아직 기준선이 안 섰다. 표본이 몇 개까지 찼는지 보여준다
+        Serial.print("--(");
+        Serial.print(drowsy.hrSamples(now));
+        Serial.print('/');
+        Serial.print(HR_BASE_MIN_N);
+        Serial.print(')');
     }
-  }
+    Serial.print(" drop=");  Serial.print(drowsy.hrDrop(now), 1);
+    Serial.print(" blank="); Serial.print(drowsy.hrBlanking(now) ? 1 : 0);
+    Serial.print('/');       Serial.print(drowsy.blankPercent());
+    Serial.print('%');
 
-  // --- CSV 한 줄 출력 ---
-  Serial.print(now / 1000);        Serial.print(',');
-  Serial.print(presence);          Serial.print(',');
-  Serial.print(movingRange);       Serial.print(',');
-  Serial.print(moveAvg, 2);        Serial.print(',');
-  Serial.print(resp);              Serial.print(',');
-  Serial.print(respState);         Serial.print(',');
-  Serial.print(rawHR);             Serial.print(',');
-  Serial.print(hrMed);             Serial.print(',');
-  Serial.print(hrCount);           Serial.print(',');
-  Serial.print(hrBase, 2);         Serial.print(',');
-  Serial.print(hrDrop, 2);         Serial.print(',');
-  Serial.print(hrBlanking ? 1 : 0); Serial.print(',');
-  Serial.print(still ? 1 : 0);     Serial.print(',');
-  Serial.print(respLost ? 1 : 0);  Serial.print(',');
-  Serial.print(hrDown ? 1 : 0);    Serial.print(',');
-  Serial.print(evidence);          Serial.print(',');
-  Serial.print(signMs / 1000);     Serial.print(',');
-  Serial.print(needMs / 1000);     Serial.print(',');
-  Serial.print(drowsy ? "DROWSY" : (present ? "AWAKE" : "NOPERSON"));
-  Serial.print(',');
-  Serial.print(millis() - cycleStart); Serial.print(',');
-  Serial.println(period);
+    Serial.print(" ev=");    Serial.print(drowsy.evidence());
+    Serial.print("(r");      Serial.print(drowsy.respLost() ? 1 : 0);
+    Serial.print("h");       Serial.print(drowsy.hrDown() ? 1 : 0);
+    // 하락 조건은 걸렸는데 아직 30초를 못 채웠으면 진행 상황을 보여준다
+    if (!drowsy.hrDown() && drowsy.hrDownPending()) {
+        Serial.print('~');
+        Serial.print(drowsy.hrDownMs(now) / 1000);
+    }
+    Serial.print(") spike-");
+    Serial.print(drowsy.sinceSpike(now) / 1000);
+    Serial.print("s ");
+    // 징후가 성립하지 않은 동안에는 0으로 찍는다. 예전에는 마지막 상태 전환
+    // 이후의 경과를 그대로 찍어서, 진행 중이 아닌데도 카운터가 올라가는 것처럼
+    // 보였다 (212/180s 인데 AWAKE)
+    Serial.print(drowsy.signActive() ? (drowsy.signMs(now) / 1000) : 0);
+    Serial.print('/');
+    Serial.print(drowsy.needMs() / 1000);
+    Serial.print("s");
 
-  // --- 30분 요약 ---
-  if (!summaryDone && now >= SUMMARY_AT_MS) {
-    printSummary(now);
-    summaryDone = true;
-  }
-
-  delay(1000);
+    Serial.print(" | f=");
+    Serial.print(radar.frames);
+    Serial.print(" unk=");
+    Serial.print(radar.unknown);
+    Serial.print(" bad=");
+    Serial.print(radar.badChecksum);
+    Serial.print(" silent=");
+    Serial.print((now - radar.lastFrameMs) / 1000.0, 1);
+    Serial.println("s");
 }

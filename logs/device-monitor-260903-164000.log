@@ -1,0 +1,4056 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:1184
+load:0x40078000,len:13232
+load:0x40080400,len:3028
+entry 0x400805e4
+Start initialization
+Initialization successful
+Start switching work mode
+Work mode switch successful
+Current work mode:Sleep detection mode
+HP LED status:On
+
+
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 12
+Respiration rate: 0
+Heart rate: 0
+----------------------- read: 625 ms / cycle: 0 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 14
+Respiration rate: 0
+Heart rate: 0
+----------------------- read: 606 ms / cycle: 1625 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 3
+Respiration rate: 15
+Heart rate: 0
+----------------------- read: 806 ms / cycle: 1606 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 12
+Respiration rate: 15
+Heart rate: 84
+----------------------- read: 796 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 9
+Respiration rate: 15
+Heart rate: 84
+----------------------- read: 486 ms / cycle: 1796 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 2
+Respiration rate: 15
+Heart rate: 81
+----------------------- read: 711 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 24
+Respiration rate: 15
+Heart rate: 81
+----------------------- read: 596 ms / cycle: 1711 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 100
+Respiration rate: 16
+Heart rate: 81
+----------------------- read: 706 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 31
+Respiration rate: 16
+Heart rate: 81
+----------------------- read: 696 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 6
+Respiration rate: 16
+Heart rate: 81
+----------------------- read: 806 ms / cycle: 1696 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 22
+Respiration rate: 16
+Heart rate: 81
+----------------------- read: 591 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 31
+Respiration rate: 17
+Heart rate: 81
+----------------------- read: 706 ms / cycle: 1591 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 47
+Respiration rate: 17
+Heart rate: 81
+----------------------- read: 706 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 8
+Respiration rate: 23
+Heart rate: 81
+----------------------- read: 486 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 2
+Respiration rate: 23
+Heart rate: 108
+----------------------- read: 711 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 2
+Respiration rate: 24
+Heart rate: 108
+----------------------- read: 596 ms / cycle: 1711 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 15
+Respiration rate: 23
+Heart rate: 111
+----------------------- read: 706 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 18
+Respiration rate: 23
+Heart rate: 111
+----------------------- read: 701 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 20
+Respiration rate: 23
+Heart rate: 114
+----------------------- read: 806 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 25
+Respiration rate: 23
+Heart rate: 108
+----------------------- read: 591 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 38
+Respiration rate: 23
+Heart rate: 108
+----------------------- read: 706 ms / cycle: 1591 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 15
+Respiration rate: 23
+Heart rate: 111
+----------------------- read: 706 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 29
+Respiration rate: 24
+Heart rate: 111
+----------------------- read: 486 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 69
+Respiration rate: 24
+Heart rate: 114
+----------------------- read: 706 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 30
+Respiration rate: 23
+Heart rate: 114
+----------------------- read: 596 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 20
+Respiration rate: 24
+Heart rate: 117
+----------------------- read: 706 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 30
+Respiration rate: 24
+Heart rate: 117
+----------------------- read: 701 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 25
+Respiration rate: 23
+Heart rate: 120
+----------------------- read: 806 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 18
+Respiration rate: 23
+Heart rate: 123
+----------------------- read: 591 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 13
+Respiration rate: 24
+Heart rate: 123
+----------------------- read: 706 ms / cycle: 1591 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 11
+Respiration rate: 24
+Heart rate: 126
+----------------------- read: 706 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 74
+Respiration rate: 23
+Heart rate: 126
+----------------------- read: 486 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 66
+Respiration rate: 23
+Heart rate: 125
+----------------------- read: 711 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 43
+Respiration rate: 23
+Heart rate: 125
+----------------------- read: 596 ms / cycle: 1711 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 56
+Respiration rate: 19
+Heart rate: 122
+----------------------- read: 706 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 27
+Respiration rate: 19
+Heart rate: 122
+----------------------- read: 701 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 11
+Respiration rate: 17
+Heart rate: 116
+----------------------- read: 906 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 28
+Respiration rate: 17
+Heart rate: 110
+----------------------- read: 696 ms / cycle: 1906 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 6
+Respiration rate: 15
+Heart rate: 110
+----------------------- read: 596 ms / cycle: 1696 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 5
+Respiration rate: 15
+Heart rate: 104
+----------------------- read: 701 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 15
+Respiration rate: 14
+Heart rate: 104
+----------------------- read: 496 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 18
+Respiration rate: 14
+Heart rate: 98
+----------------------- read: 811 ms / cycle: 1496 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 10
+Respiration rate: 13
+Heart rate: 98
+----------------------- read: 696 ms / cycle: 1811 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 9
+Respiration rate: 13
+Heart rate: 92
+----------------------- read: 701 ms / cycle: 1696 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 14
+Respiration rate: 13
+Heart rate: 86
+----------------------- read: 701 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 4
+Respiration rate: 13
+Heart rate: 86
+----------------------- read: 701 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 4
+Respiration rate: 13
+Heart rate: 83
+----------------------- read: 806 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 25
+Respiration rate: 12
+Heart rate: 83
+----------------------- read: 486 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 39
+Respiration rate: 12
+Heart rate: 80
+----------------------- read: 711 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 39
+Respiration rate: 11
+Heart rate: 80
+----------------------- read: 470 ms / cycle: 1711 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 39
+Respiration rate: 11
+Heart rate: 80
+----------------------- read: 475 ms / cycle: 1470 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 39
+Respiration rate: 11
+Heart rate: 80
+----------------------- read: 470 ms / cycle: 1475 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 39
+Respiration rate: 11
+Heart rate: 80
+----------------------- read: 470 ms / cycle: 1470 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 39
+Respiration rate: 11
+Heart rate: 80
+----------------------- read: 470 ms / cycle: 1470 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 39
+Respiration rate: 11
+Heart rate: 80
+----------------------- read: 470 ms / cycle: 1470 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 39
+Respiration rate: 11
+Heart rate: 80
+----------------------- read: 470 ms / cycle: 1470 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 39
+Respiration rate: 11
+Heart rate: 80
+----------------------- read: 470 ms / cycle: 1470 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 39
+Respiration rate: 11
+Heart rate: 80
+----------------------- read: 470 ms / cycle: 1470 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 39
+Respiration rate: 11
+Heart rate: 80
+----------------------- read: 470 ms / cycle: 1470 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 39
+Respiration rate: 11
+Heart rate: 80
+----------------------- read: 470 ms / cycle: 1470 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 39
+Respiration rate: 11
+Heart rate: 80
+----------------------- read: 470 ms / cycle: 1470 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 39
+Respiration rate: 11
+Heart rate: 80
+----------------------- read: 470 ms / cycle: 1470 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 39
+Respiration rate: 11
+Heart rate: 80
+----------------------- read: 470 ms / cycle: 1470 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 39
+Respiration rate: 11
+Heart rate: 80
+----------------------- read: 470 ms / cycle: 1470 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 24
+Respiration rate: 0
+Heart rate: 0
+----------------------- read: 5752 ms / cycle: 1470 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 28
+Respiration rate: 0
+Heart rate: 0
+----------------------- read: 586 ms / cycle: 6752 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 40
+Respiration rate: 0
+Heart rate: 0
+----------------------- read: 601 ms / cycle: 1586 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 100
+Respiration rate: 0
+Heart rate: 0
+----------------------- read: 706 ms / cycle: 1601 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 27
+Respiration rate: 0
+Heart rate: 0
+----------------------- read: 496 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 44
+Respiration rate: 0
+Heart rate: 0
+----------------------- read: 811 ms / cycle: 1496 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 22
+Respiration rate: 0
+Heart rate: 0
+----------------------- read: 696 ms / cycle: 1811 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 100
+Respiration rate: 0
+Heart rate: 0
+----------------------- read: 491 ms / cycle: 1696 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 26
+Respiration rate: 0
+Heart rate: 0
+----------------------- read: 711 ms / cycle: 1491 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 22
+Respiration rate: 0
+Heart rate: 0
+----------------------- read: 701 ms / cycle: 1711 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 12
+Respiration rate: 0
+Heart rate: 0
+----------------------- read: 491 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 58
+Respiration rate: 0
+Heart rate: 0
+----------------------- read: 711 ms / cycle: 1491 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 12
+Respiration rate: 0
+Heart rate: 0
+----------------------- read: 596 ms / cycle: 1711 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 21
+Respiration rate: 0
+Heart rate: 78
+----------------------- read: 701 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 61
+Respiration rate: 13
+Heart rate: 78
+----------------------- read: 701 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 61
+Respiration rate: 13
+Heart rate: 106
+----------------------- read: 806 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 17
+Respiration rate: 24
+Heart rate: 106
+----------------------- read: 491 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 47
+Respiration rate: 24
+Heart rate: 109
+----------------------- read: 706 ms / cycle: 1491 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 23
+Respiration rate: 24
+Heart rate: 109
+----------------------- read: 596 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 44
+Respiration rate: 24
+Heart rate: 112
+----------------------- read: 706 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 66
+Respiration rate: 24
+Heart rate: 112
+----------------------- read: 701 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 17
+Respiration rate: 24
+Heart rate: 106
+----------------------- read: 806 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 14
+Respiration rate: 24
+Heart rate: 109
+----------------------- read: 591 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 11
+Respiration rate: 24
+Heart rate: 109
+----------------------- read: 706 ms / cycle: 1591 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 5
+Respiration rate: 24
+Heart rate: 112
+----------------------- read: 706 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 11
+Respiration rate: 23
+Heart rate: 112
+----------------------- read: 486 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 48
+Respiration rate: 23
+Heart rate: 115
+----------------------- read: 711 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 24
+Respiration rate: 23
+Heart rate: 115
+----------------------- read: 596 ms / cycle: 1711 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 17
+Respiration rate: 23
+Heart rate: 118
+----------------------- read: 706 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 22
+Respiration rate: 23
+Heart rate: 118
+----------------------- read: 701 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 22
+Respiration rate: 23
+Heart rate: 121
+----------------------- read: 801 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 1
+Respiration rate: 23
+Heart rate: 121
+----------------------- read: 596 ms / cycle: 1801 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 33
+Respiration rate: 23
+Heart rate: 121
+----------------------- read: 701 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 20
+Respiration rate: 23
+Heart rate: 108
+----------------------- read: 706 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 9
+Respiration rate: 23
+Heart rate: 108
+----------------------- read: 486 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 10
+Respiration rate: 23
+Heart rate: 111
+----------------------- read: 711 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 3
+Respiration rate: 23
+Heart rate: 111
+----------------------- read: 596 ms / cycle: 1711 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 37
+Respiration rate: 23
+Heart rate: 106
+----------------------- read: 706 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 12
+Respiration rate: 23
+Heart rate: 106
+----------------------- read: 701 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 39
+Respiration rate: 24
+Heart rate: 109
+----------------------- read: 806 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 3
+Respiration rate: 24
+Heart rate: 112
+----------------------- read: 591 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 3
+Respiration rate: 24
+Heart rate: 112
+----------------------- read: 706 ms / cycle: 1591 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 69
+Respiration rate: 24
+Heart rate: 115
+----------------------- read: 706 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 13
+Respiration rate: 24
+Heart rate: 115
+----------------------- read: 486 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 10
+Respiration rate: 24
+Heart rate: 118
+----------------------- read: 711 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 20
+Respiration rate: 23
+Heart rate: 118
+----------------------- read: 596 ms / cycle: 1711 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 19
+Respiration rate: 23
+Heart rate: 121
+----------------------- read: 701 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 21
+Respiration rate: 23
+Heart rate: 121
+----------------------- read: 701 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 29
+Respiration rate: 23
+Heart rate: 121
+----------------------- read: 806 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 68
+Respiration rate: 23
+Heart rate: 115
+----------------------- read: 591 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 40
+Respiration rate: 23
+Heart rate: 115
+----------------------- read: 706 ms / cycle: 1591 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 24
+Respiration rate: 23
+Heart rate: 109
+----------------------- read: 706 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 61
+Respiration rate: 23
+Heart rate: 109
+----------------------- read: 486 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 8
+Respiration rate: 23
+Heart rate: 103
+----------------------- read: 711 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 7
+Respiration rate: 23
+Heart rate: 103
+----------------------- read: 596 ms / cycle: 1711 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 3
+Respiration rate: 21
+Heart rate: 100
+----------------------- read: 706 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 12
+Respiration rate: 21
+Heart rate: 100
+----------------------- read: 701 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 82
+Respiration rate: 22
+Heart rate: 97
+----------------------- read: 801 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 4
+Respiration rate: 22
+Heart rate: 94
+----------------------- read: 596 ms / cycle: 1801 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 13
+Respiration rate: 22
+Heart rate: 94
+----------------------- read: 706 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 19
+Respiration rate: 22
+Heart rate: 93
+----------------------- read: 701 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 25
+Respiration rate: 23
+Heart rate: 93
+----------------------- read: 491 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 14
+Respiration rate: 23
+Heart rate: 93
+----------------------- read: 706 ms / cycle: 1491 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 23
+Respiration rate: 22
+Heart rate: 93
+----------------------- read: 596 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 8
+Respiration rate: 23
+Heart rate: 87
+----------------------- read: 706 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 29
+Respiration rate: 23
+Heart rate: 87
+----------------------- read: 701 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 34
+Respiration rate: 22
+Heart rate: 84
+----------------------- read: 806 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 14
+Respiration rate: 22
+Heart rate: 84
+----------------------- read: 591 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 20
+Respiration rate: 21
+Heart rate: 84
+----------------------- read: 706 ms / cycle: 1591 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 19
+Respiration rate: 21
+Heart rate: 84
+----------------------- read: 706 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 33
+Respiration rate: 20
+Heart rate: 84
+----------------------- read: 486 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 13
+Respiration rate: 20
+Heart rate: 84
+----------------------- read: 711 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 27
+Respiration rate: 19
+Heart rate: 84
+----------------------- read: 596 ms / cycle: 1711 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 22
+Respiration rate: 18
+Heart rate: 84
+----------------------- read: 706 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 30
+Respiration rate: 18
+Heart rate: 84
+----------------------- read: 696 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 81
+Respiration rate: 16
+Heart rate: 84
+----------------------- read: 806 ms / cycle: 1696 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 35
+Respiration rate: 16
+Heart rate: 82
+----------------------- read: 596 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 55
+Respiration rate: 16
+Heart rate: 82
+----------------------- read: 701 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 26
+Respiration rate: 16
+Heart rate: 78
+----------------------- read: 706 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 53
+Respiration rate: 16
+Heart rate: 78
+----------------------- read: 486 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 51
+Respiration rate: 16
+Heart rate: 75
+----------------------- read: 711 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 9
+Respiration rate: 17
+Heart rate: 75
+----------------------- read: 596 ms / cycle: 1711 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 66
+Respiration rate: 17
+Heart rate: 77
+----------------------- read: 706 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 35
+Respiration rate: 17
+Heart rate: 77
+----------------------- read: 701 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 59
+Respiration rate: 23
+Heart rate: 77
+----------------------- read: 806 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 17
+Respiration rate: 23
+Heart rate: 108
+----------------------- read: 591 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 74
+Respiration rate: 24
+Heart rate: 108
+----------------------- read: 706 ms / cycle: 1591 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 30
+Respiration rate: 24
+Heart rate: 111
+----------------------- read: 706 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 21
+Respiration rate: 23
+Heart rate: 111
+----------------------- read: 486 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 42
+Respiration rate: 23
+Heart rate: 106
+----------------------- read: 711 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 22
+Respiration rate: 23
+Heart rate: 106
+----------------------- read: 596 ms / cycle: 1711 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 28
+Respiration rate: 23
+Heart rate: 109
+----------------------- read: 701 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 31
+Respiration rate: 23
+Heart rate: 109
+----------------------- read: 701 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 37
+Respiration rate: 24
+Heart rate: 112
+----------------------- read: 806 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 34
+Respiration rate: 24
+Heart rate: 115
+----------------------- read: 591 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 43
+Respiration rate: 23
+Heart rate: 115
+----------------------- read: 706 ms / cycle: 1591 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 63
+Respiration rate: 23
+Heart rate: 118
+----------------------- read: 706 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 100
+Respiration rate: 23
+Heart rate: 118
+----------------------- read: 486 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 37
+Respiration rate: 23
+Heart rate: 107
+----------------------- read: 921 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 24
+Heart rate: 107
+----------------------- read: 796 ms / cycle: 1921 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 1
+Respiration rate: 24
+Heart rate: 110
+----------------------- read: 901 ms / cycle: 1796 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 3
+Respiration rate: 24
+Heart rate: 113
+----------------------- read: 696 ms / cycle: 1901 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 13
+Respiration rate: 23
+Heart rate: 113
+----------------------- read: 596 ms / cycle: 1696 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 23
+Heart rate: 116
+----------------------- read: 806 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 24
+Heart rate: 116
+----------------------- read: 591 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 24
+Heart rate: 119
+----------------------- read: 706 ms / cycle: 1591 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 24
+Heart rate: 122
+----------------------- read: 911 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 24
+Heart rate: 122
+----------------------- read: 691 ms / cycle: 1911 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 24
+Heart rate: 125
+----------------------- read: 701 ms / cycle: 1691 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 24
+Heart rate: 125
+----------------------- read: 606 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 24
+Heart rate: 121
+----------------------- read: 696 ms / cycle: 1606 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 24
+Heart rate: 121
+----------------------- read: 496 ms / cycle: 1696 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 24
+Heart rate: 115
+----------------------- read: 811 ms / cycle: 1496 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 23
+Heart rate: 115
+----------------------- read: 696 ms / cycle: 1811 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 23
+Heart rate: 109
+----------------------- read: 701 ms / cycle: 1696 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 23
+Heart rate: 103
+----------------------- read: 701 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 23
+Heart rate: 103
+----------------------- read: 701 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 23
+Heart rate: 97
+----------------------- read: 906 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 2
+Respiration rate: 23
+Heart rate: 97
+----------------------- read: 486 ms / cycle: 1906 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 23
+Heart rate: 95
+----------------------- read: 811 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 23
+Heart rate: 95
+----------------------- read: 696 ms / cycle: 1811 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 23
+Heart rate: 95
+----------------------- read: 706 ms / cycle: 1696 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 23
+Heart rate: 95
+----------------------- read: 696 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 23
+Heart rate: 95
+----------------------- read: 806 ms / cycle: 1696 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 23
+Heart rate: 93
+----------------------- read: 701 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 2
+Respiration rate: 23
+Heart rate: 93
+----------------------- read: 486 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 2
+Respiration rate: 23
+Heart rate: 87
+----------------------- read: 711 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 2
+Respiration rate: 22
+Heart rate: 87
+----------------------- read: 596 ms / cycle: 1711 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 20
+Heart rate: 81
+----------------------- read: 706 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 20
+Heart rate: 75
+----------------------- read: 911 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 19
+Heart rate: 75
+----------------------- read: 691 ms / cycle: 1911 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 19
+Heart rate: 71
+----------------------- read: 701 ms / cycle: 1691 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 18
+Heart rate: 71
+----------------------- read: 596 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 18
+Heart rate: 68
+----------------------- read: 701 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 18
+Heart rate: 68
+----------------------- read: 496 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 18
+Heart rate: 65
+----------------------- read: 811 ms / cycle: 1496 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 2
+Respiration rate: 17
+Heart rate: 65
+----------------------- read: 801 ms / cycle: 1811 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 21
+Respiration rate: 18
+Heart rate: 63
+----------------------- read: 802 ms / cycle: 1801 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 6
+Respiration rate: 18
+Heart rate: 64
+----------------------- read: 591 ms / cycle: 1802 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 19
+Heart rate: 64
+----------------------- read: 817 ms / cycle: 1591 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 1
+Respiration rate: 19
+Heart rate: 67
+----------------------- read: 796 ms / cycle: 1817 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 20
+Heart rate: 67
+----------------------- read: 591 ms / cycle: 1796 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 21
+Heart rate: 70
+----------------------- read: 706 ms / cycle: 1591 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 21
+Heart rate: 73
+----------------------- read: 906 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 3
+Respiration rate: 22
+Heart rate: 73
+----------------------- read: 796 ms / cycle: 1906 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 22
+Heart rate: 73
+----------------------- read: 906 ms / cycle: 1796 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 22
+Heart rate: 73
+----------------------- read: 486 ms / cycle: 1906 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 22
+Heart rate: 73
+----------------------- read: 811 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 21
+Heart rate: 73
+----------------------- read: 801 ms / cycle: 1811 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 20
+Heart rate: 73
+----------------------- read: 806 ms / cycle: 1801 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 20
+Heart rate: 73
+----------------------- read: 586 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 20
+Heart rate: 73
+----------------------- read: 706 ms / cycle: 1586 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 20
+Heart rate: 72
+----------------------- read: 706 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 3
+Respiration rate: 19
+Heart rate: 72
+----------------------- read: 486 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 19
+Heart rate: 72
+----------------------- read: 711 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 19
+Heart rate: 72
+----------------------- read: 596 ms / cycle: 1711 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 18
+Heart rate: 72
+----------------------- read: 706 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 1
+Respiration rate: 18
+Heart rate: 72
+----------------------- read: 701 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 6
+Respiration rate: 16
+Heart rate: 72
+----------------------- read: 906 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 3
+Respiration rate: 16
+Heart rate: 72
+----------------------- read: 801 ms / cycle: 1906 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 1
+Respiration rate: 16
+Heart rate: 72
+----------------------- read: 486 ms / cycle: 1801 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 16
+Heart rate: 75
+----------------------- read: 706 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 2
+Respiration rate: 16
+Heart rate: 75
+----------------------- read: 601 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 16
+Heart rate: 78
+----------------------- read: 712 ms / cycle: 1601 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 2
+Respiration rate: 15
+Heart rate: 78
+----------------------- read: 691 ms / cycle: 1712 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 14
+Heart rate: 81
+----------------------- read: 701 ms / cycle: 1691 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 14
+Heart rate: 84
+----------------------- read: 711 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 15
+Heart rate: 84
+----------------------- read: 691 ms / cycle: 1711 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 15
+Heart rate: 86
+----------------------- read: 906 ms / cycle: 1691 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 16
+Heart rate: 86
+----------------------- read: 486 ms / cycle: 1906 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 16
+Heart rate: 86
+----------------------- read: 916 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 16
+Heart rate: 86
+----------------------- read: 901 ms / cycle: 1916 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 17
+Heart rate: 86
+----------------------- read: 691 ms / cycle: 1901 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 17
+Heart rate: 86
+----------------------- read: 706 ms / cycle: 1691 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 17
+Heart rate: 86
+----------------------- read: 591 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 4
+Respiration rate: 17
+Heart rate: 86
+----------------------- read: 811 ms / cycle: 1591 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 4
+Respiration rate: 17
+Heart rate: 86
+----------------------- read: 591 ms / cycle: 1811 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 71
+Respiration rate: 16
+Heart rate: 86
+----------------------- read: 716 ms / cycle: 1591 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 66
+Respiration rate: 16
+Heart rate: 86
+----------------------- read: 691 ms / cycle: 1716 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 48
+Respiration rate: 23
+Heart rate: 106
+----------------------- read: 806 ms / cycle: 1691 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 52
+Respiration rate: 23
+Heart rate: 109
+----------------------- read: 591 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 43
+Respiration rate: 24
+Heart rate: 109
+----------------------- read: 706 ms / cycle: 1591 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 28
+Respiration rate: 24
+Heart rate: 112
+----------------------- read: 811 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 16
+Respiration rate: 23
+Heart rate: 112
+----------------------- read: 481 ms / cycle: 1811 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 26
+Respiration rate: 23
+Heart rate: 115
+----------------------- read: 811 ms / cycle: 1481 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 38
+Respiration rate: 23
+Heart rate: 115
+----------------------- read: 701 ms / cycle: 1811 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 21
+Respiration rate: 23
+Heart rate: 118
+----------------------- read: 701 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 23
+Respiration rate: 23
+Heart rate: 108
+----------------------- read: 696 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 29
+Respiration rate: 23
+Heart rate: 108
+----------------------- read: 701 ms / cycle: 1696 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 8
+Respiration rate: 23
+Heart rate: 111
+----------------------- read: 806 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 68
+Respiration rate: 23
+Heart rate: 112
+----------------------- read: 701 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 39
+Respiration rate: 24
+Heart rate: 112
+----------------------- read: 486 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 19
+Respiration rate: 24
+Heart rate: 115
+----------------------- read: 711 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 59
+Respiration rate: 23
+Heart rate: 115
+----------------------- read: 596 ms / cycle: 1711 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 43
+Respiration rate: 24
+Heart rate: 118
+----------------------- read: 706 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 20
+Respiration rate: 24
+Heart rate: 118
+----------------------- read: 701 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 14
+Respiration rate: 24
+Heart rate: 107
+----------------------- read: 806 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 6
+Respiration rate: 24
+Heart rate: 110
+----------------------- read: 591 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 12
+Respiration rate: 24
+Heart rate: 110
+----------------------- read: 706 ms / cycle: 1591 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 6
+Respiration rate: 24
+Heart rate: 113
+----------------------- read: 701 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 44
+Respiration rate: 24
+Heart rate: 113
+----------------------- read: 491 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 6
+Respiration rate: 24
+Heart rate: 116
+----------------------- read: 706 ms / cycle: 1491 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 6
+Respiration rate: 24
+Heart rate: 116
+----------------------- read: 596 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 9
+Respiration rate: 23
+Heart rate: 119
+----------------------- read: 706 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 43
+Respiration rate: 23
+Heart rate: 119
+----------------------- read: 701 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 40
+Respiration rate: 24
+Heart rate: 122
+----------------------- read: 806 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 16
+Respiration rate: 24
+Heart rate: 119
+----------------------- read: 591 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 14
+Respiration rate: 23
+Heart rate: 119
+----------------------- read: 706 ms / cycle: 1591 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 38
+Respiration rate: 23
+Heart rate: 113
+----------------------- read: 706 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 14
+Respiration rate: 23
+Heart rate: 113
+----------------------- read: 486 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 38
+Respiration rate: 23
+Heart rate: 107
+----------------------- read: 711 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 64
+Respiration rate: 22
+Heart rate: 107
+----------------------- read: 596 ms / cycle: 1711 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 46
+Respiration rate: 24
+Heart rate: 106
+----------------------- read: 706 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 96
+Respiration rate: 24
+Heart rate: 106
+----------------------- read: 701 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 51
+Respiration rate: 23
+Heart rate: 109
+----------------------- read: 801 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 62
+Respiration rate: 23
+Heart rate: 112
+----------------------- read: 596 ms / cycle: 1801 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 100
+Respiration rate: 24
+Heart rate: 112
+----------------------- read: 701 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 100
+Respiration rate: 24
+Heart rate: 115
+----------------------- read: 706 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 41
+Respiration rate: 23
+Heart rate: 115
+----------------------- read: 486 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 18
+Respiration rate: 23
+Heart rate: 118
+----------------------- read: 711 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 10
+Respiration rate: 24
+Heart rate: 118
+----------------------- read: 596 ms / cycle: 1711 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 26
+Respiration rate: 23
+Heart rate: 121
+----------------------- read: 706 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 51
+Respiration rate: 23
+Heart rate: 121
+----------------------- read: 701 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 35
+Respiration rate: 24
+Heart rate: 124
+----------------------- read: 806 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 42
+Respiration rate: 24
+Heart rate: 126
+----------------------- read: 591 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 14
+Respiration rate: 23
+Heart rate: 126
+----------------------- read: 706 ms / cycle: 1591 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 9
+Respiration rate: 23
+Heart rate: 125
+----------------------- read: 706 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 12
+Respiration rate: 23
+Heart rate: 125
+----------------------- read: 486 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 23
+Respiration rate: 23
+Heart rate: 126
+----------------------- read: 706 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 4
+Respiration rate: 24
+Heart rate: 126
+----------------------- read: 601 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 4
+Respiration rate: 23
+Heart rate: 126
+----------------------- read: 701 ms / cycle: 1601 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 18
+Respiration rate: 23
+Heart rate: 126
+----------------------- read: 701 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 6
+Respiration rate: 24
+Heart rate: 127
+----------------------- read: 806 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 8
+Respiration rate: 24
+Heart rate: 126
+----------------------- read: 591 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 9
+Respiration rate: 23
+Heart rate: 126
+----------------------- read: 706 ms / cycle: 1591 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 31
+Respiration rate: 23
+Heart rate: 127
+----------------------- read: 706 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 23
+Respiration rate: 23
+Heart rate: 127
+----------------------- read: 486 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 1
+Respiration rate: 23
+Heart rate: 126
+----------------------- read: 711 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 9
+Respiration rate: 23
+Heart rate: 126
+----------------------- read: 596 ms / cycle: 1711 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 9
+Respiration rate: 21
+Heart rate: 122
+----------------------- read: 706 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 56
+Respiration rate: 21
+Heart rate: 122
+----------------------- read: 701 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 9
+Respiration rate: 19
+Heart rate: 116
+----------------------- read: 806 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 16
+Respiration rate: 19
+Heart rate: 110
+----------------------- read: 591 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 6
+Respiration rate: 17
+Heart rate: 110
+----------------------- read: 701 ms / cycle: 1591 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 5
+Respiration rate: 17
+Heart rate: 104
+----------------------- read: 706 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 4
+Respiration rate: 15
+Heart rate: 104
+----------------------- read: 591 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 6
+Respiration rate: 15
+Heart rate: 98
+----------------------- read: 811 ms / cycle: 1591 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 28
+Respiration rate: 13
+Heart rate: 98
+----------------------- read: 701 ms / cycle: 1811 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 15
+Respiration rate: 12
+Heart rate: 92
+----------------------- read: 696 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 8
+Respiration rate: 12
+Heart rate: 86
+----------------------- read: 701 ms / cycle: 1696 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 14
+Respiration rate: 11
+Heart rate: 86
+----------------------- read: 701 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 31
+Respiration rate: 11
+Heart rate: 80
+----------------------- read: 806 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 80
+Respiration rate: 11
+Heart rate: 80
+----------------------- read: 486 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 32
+Respiration rate: 11
+Heart rate: 77
+----------------------- read: 711 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 6
+Respiration rate: 11
+Heart rate: 77
+----------------------- read: 596 ms / cycle: 1711 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 4
+Respiration rate: 11
+Heart rate: 74
+----------------------- read: 706 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 4
+Respiration rate: 11
+Heart rate: 74
+----------------------- read: 701 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 7
+Respiration rate: 11
+Heart rate: 71
+----------------------- read: 801 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 4
+Respiration rate: 11
+Heart rate: 71
+----------------------- read: 596 ms / cycle: 1801 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 2
+Respiration rate: 14
+Heart rate: 71
+----------------------- read: 706 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 2
+Respiration rate: 14
+Heart rate: 71
+----------------------- read: 702 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 2
+Respiration rate: 16
+Heart rate: 71
+----------------------- read: 486 ms / cycle: 1702 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 16
+Heart rate: 71
+----------------------- read: 921 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 9
+Respiration rate: 17
+Heart rate: 71
+----------------------- read: 691 ms / cycle: 1921 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 13
+Respiration rate: 17
+Heart rate: 71
+----------------------- read: 701 ms / cycle: 1691 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 4
+Respiration rate: 17
+Heart rate: 71
+----------------------- read: 701 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 18
+Respiration rate: 16
+Heart rate: 71
+----------------------- read: 701 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 10
+Respiration rate: 16
+Heart rate: 71
+----------------------- read: 806 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 16
+Respiration rate: 17
+Heart rate: 71
+----------------------- read: 486 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 10
+Respiration rate: 17
+Heart rate: 71
+----------------------- read: 711 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 3
+Respiration rate: 16
+Heart rate: 71
+----------------------- read: 596 ms / cycle: 1711 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 2
+Respiration rate: 16
+Heart rate: 71
+----------------------- read: 706 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 4
+Respiration rate: 16
+Heart rate: 71
+----------------------- read: 906 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 6
+Respiration rate: 16
+Heart rate: 71
+----------------------- read: 801 ms / cycle: 1906 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 8
+Respiration rate: 16
+Heart rate: 71
+----------------------- read: 901 ms / cycle: 1801 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 4
+Respiration rate: 17
+Heart rate: 71
+----------------------- read: 481 ms / cycle: 1901 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 7
+Respiration rate: 17
+Heart rate: 71
+----------------------- read: 816 ms / cycle: 1481 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 2
+Respiration rate: 17
+Heart rate: 71
+----------------------- read: 801 ms / cycle: 1816 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 3
+Respiration rate: 17
+Heart rate: 71
+----------------------- read: 801 ms / cycle: 1801 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 9
+Respiration rate: 17
+Heart rate: 71
+----------------------- read: 591 ms / cycle: 1801 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 4
+Respiration rate: 17
+Heart rate: 71
+----------------------- read: 916 ms / cycle: 1591 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 5
+Respiration rate: 17
+Heart rate: 71
+----------------------- read: 691 ms / cycle: 1916 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 4
+Respiration rate: 17
+Heart rate: 71
+----------------------- read: 806 ms / cycle: 1691 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 8
+Respiration rate: 17
+Heart rate: 74
+----------------------- read: 592 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 9
+Respiration rate: 17
+Heart rate: 75
+----------------------- read: 911 ms / cycle: 1592 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 6
+Respiration rate: 18
+Heart rate: 75
+----------------------- read: 796 ms / cycle: 1911 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 7
+Respiration rate: 18
+Heart rate: 75
+----------------------- read: 701 ms / cycle: 1796 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 4
+Respiration rate: 18
+Heart rate: 75
+----------------------- read: 491 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 6
+Respiration rate: 18
+Heart rate: 75
+----------------------- read: 706 ms / cycle: 1491 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 18
+Heart rate: 75
+----------------------- read: 701 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 34
+Respiration rate: 18
+Heart rate: 75
+----------------------- read: 601 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 8
+Respiration rate: 18
+Heart rate: 75
+----------------------- read: 911 ms / cycle: 1601 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 12
+Respiration rate: 18
+Heart rate: 75
+----------------------- read: 691 ms / cycle: 1911 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 14
+Respiration rate: 18
+Heart rate: 75
+----------------------- read: 701 ms / cycle: 1691 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 4
+Respiration rate: 18
+Heart rate: 75
+----------------------- read: 596 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 3
+Respiration rate: 18
+Heart rate: 75
+----------------------- read: 811 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 7
+Respiration rate: 18
+Heart rate: 75
+----------------------- read: 696 ms / cycle: 1811 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 3
+Respiration rate: 18
+Heart rate: 73
+----------------------- read: 597 ms / cycle: 1696 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 16
+Respiration rate: 18
+Heart rate: 73
+----------------------- read: 701 ms / cycle: 1597 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 12
+Respiration rate: 18
+Heart rate: 69
+----------------------- read: 806 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 7
+Respiration rate: 18
+Heart rate: 66
+----------------------- read: 591 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 4
+Respiration rate: 18
+Heart rate: 66
+----------------------- read: 706 ms / cycle: 1591 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 8
+Respiration rate: 18
+Heart rate: 63
+----------------------- read: 706 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 2
+Respiration rate: 18
+Heart rate: 63
+----------------------- read: 486 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 9
+Respiration rate: 18
+Heart rate: 62
+----------------------- read: 711 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 11
+Respiration rate: 19
+Heart rate: 62
+----------------------- read: 596 ms / cycle: 1711 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 15
+Respiration rate: 19
+Heart rate: 62
+----------------------- read: 706 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 27
+Respiration rate: 19
+Heart rate: 62
+----------------------- read: 701 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 12
+Respiration rate: 20
+Heart rate: 62
+----------------------- read: 806 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 9
+Respiration rate: 20
+Heart rate: 62
+----------------------- read: 591 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 5
+Respiration rate: 20
+Heart rate: 62
+----------------------- read: 706 ms / cycle: 1591 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 3
+Respiration rate: 20
+Heart rate: 62
+----------------------- read: 806 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 12
+Respiration rate: 21
+Heart rate: 62
+----------------------- read: 486 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 5
+Respiration rate: 21
+Heart rate: 64
+----------------------- read: 811 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 9
+Respiration rate: 21
+Heart rate: 64
+----------------------- read: 701 ms / cycle: 1811 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 18
+Respiration rate: 21
+Heart rate: 67
+----------------------- read: 696 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 24
+Respiration rate: 21
+Heart rate: 69
+----------------------- read: 701 ms / cycle: 1696 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 2
+Respiration rate: 21
+Heart rate: 69
+----------------------- read: 701 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 5
+Respiration rate: 21
+Heart rate: 69
+----------------------- read: 806 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 8
+Respiration rate: 19
+Heart rate: 69
+----------------------- read: 486 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 19
+Heart rate: 69
+----------------------- read: 711 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 2
+Respiration rate: 19
+Heart rate: 69
+----------------------- read: 596 ms / cycle: 1711 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 3
+Respiration rate: 20
+Heart rate: 69
+----------------------- read: 706 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 4
+Respiration rate: 20
+Heart rate: 69
+----------------------- read: 701 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 2
+Respiration rate: 21
+Heart rate: 69
+----------------------- read: 906 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 1
+Respiration rate: 21
+Heart rate: 69
+----------------------- read: 801 ms / cycle: 1906 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 3
+Respiration rate: 21
+Heart rate: 69
+----------------------- read: 487 ms / cycle: 1801 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 3
+Respiration rate: 21
+Heart rate: 69
+----------------------- read: 706 ms / cycle: 1487 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 4
+Respiration rate: 19
+Heart rate: 69
+----------------------- read: 596 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 2
+Respiration rate: 19
+Heart rate: 69
+----------------------- read: 717 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 4
+Respiration rate: 16
+Heart rate: 69
+----------------------- read: 691 ms / cycle: 1717 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 14
+Respiration rate: 14
+Heart rate: 69
+----------------------- read: 701 ms / cycle: 1691 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 2
+Respiration rate: 14
+Heart rate: 69
+----------------------- read: 701 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 3
+Respiration rate: 16
+Heart rate: 69
+----------------------- read: 806 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 3
+Respiration rate: 16
+Heart rate: 69
+----------------------- read: 696 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 8
+Respiration rate: 17
+Heart rate: 69
+----------------------- read: 491 ms / cycle: 1696 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 5
+Respiration rate: 17
+Heart rate: 69
+----------------------- read: 706 ms / cycle: 1491 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 4
+Respiration rate: 17
+Heart rate: 69
+----------------------- read: 596 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 17
+Respiration rate: 17
+Heart rate: 69
+----------------------- read: 706 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 7
+Respiration rate: 17
+Heart rate: 69
+----------------------- read: 911 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 4
+Respiration rate: 16
+Heart rate: 69
+----------------------- read: 691 ms / cycle: 1911 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 16
+Respiration rate: 16
+Heart rate: 70
+----------------------- read: 701 ms / cycle: 1691 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 11
+Respiration rate: 17
+Heart rate: 70
+----------------------- read: 596 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 21
+Respiration rate: 17
+Heart rate: 73
+----------------------- read: 706 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 9
+Respiration rate: 18
+Heart rate: 73
+----------------------- read: 491 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 5
+Respiration rate: 18
+Heart rate: 76
+----------------------- read: 816 ms / cycle: 1491 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 10
+Respiration rate: 18
+Heart rate: 76
+----------------------- read: 696 ms / cycle: 1816 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 4
+Respiration rate: 18
+Heart rate: 79
+----------------------- read: 701 ms / cycle: 1696 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 12
+Respiration rate: 18
+Heart rate: 82
+----------------------- read: 701 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 5
+Respiration rate: 18
+Heart rate: 82
+----------------------- read: 701 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 5
+Respiration rate: 18
+Heart rate: 82
+----------------------- read: 801 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 17
+Respiration rate: 18
+Heart rate: 82
+----------------------- read: 491 ms / cycle: 1801 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 5
+Respiration rate: 18
+Heart rate: 82
+----------------------- read: 706 ms / cycle: 1491 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 12
+Respiration rate: 18
+Heart rate: 82
+----------------------- read: 596 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 2
+Respiration rate: 18
+Heart rate: 82
+----------------------- read: 706 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 11
+Respiration rate: 18
+Heart rate: 82
+----------------------- read: 701 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 12
+Respiration rate: 18
+Heart rate: 82
+----------------------- read: 806 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 31
+Respiration rate: 18
+Heart rate: 82
+----------------------- read: 591 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 4
+Respiration rate: 18
+Heart rate: 82
+----------------------- read: 706 ms / cycle: 1591 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 10
+Respiration rate: 18
+Heart rate: 82
+----------------------- read: 706 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 6
+Respiration rate: 18
+Heart rate: 82
+----------------------- read: 486 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 25
+Respiration rate: 18
+Heart rate: 82
+----------------------- read: 916 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 24
+Respiration rate: 18
+Heart rate: 82
+----------------------- read: 696 ms / cycle: 1916 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 4
+Respiration rate: 17
+Heart rate: 79
+----------------------- read: 701 ms / cycle: 1696 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 6
+Respiration rate: 17
+Heart rate: 76
+----------------------- read: 696 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 4
+Respiration rate: 17
+Heart rate: 76
+----------------------- read: 701 ms / cycle: 1696 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 11
+Respiration rate: 17
+Heart rate: 73
+----------------------- read: 806 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 2
+Respiration rate: 18
+Heart rate: 73
+----------------------- read: 486 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 8
+Respiration rate: 18
+Heart rate: 73
+----------------------- read: 711 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 9
+Respiration rate: 17
+Heart rate: 73
+----------------------- read: 596 ms / cycle: 1711 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 13
+Respiration rate: 16
+Heart rate: 73
+----------------------- read: 706 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 21
+Respiration rate: 16
+Heart rate: 73
+----------------------- read: 701 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 10
+Respiration rate: 16
+Heart rate: 73
+----------------------- read: 806 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 20
+Respiration rate: 16
+Heart rate: 73
+----------------------- read: 591 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 10
+Respiration rate: 15
+Heart rate: 73
+----------------------- read: 811 ms / cycle: 1591 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 15
+Respiration rate: 15
+Heart rate: 73
+----------------------- read: 801 ms / cycle: 1811 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 9
+Respiration rate: 17
+Heart rate: 73
+----------------------- read: 591 ms / cycle: 1801 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 10
+Respiration rate: 18
+Heart rate: 73
+----------------------- read: 706 ms / cycle: 1591 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 11
+Respiration rate: 18
+Heart rate: 73
+----------------------- read: 701 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 49
+Respiration rate: 20
+Heart rate: 75
+----------------------- read: 801 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 11
+Respiration rate: 20
+Heart rate: 78
+----------------------- read: 596 ms / cycle: 1801 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 4
+Respiration rate: 20
+Heart rate: 78
+----------------------- read: 701 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 6
+Respiration rate: 20
+Heart rate: 81
+----------------------- read: 706 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 6
+Respiration rate: 18
+Heart rate: 81
+----------------------- read: 491 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 3
+Respiration rate: 18
+Heart rate: 82
+----------------------- read: 916 ms / cycle: 1491 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 3
+Respiration rate: 19
+Heart rate: 82
+----------------------- read: 691 ms / cycle: 1916 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 6
+Respiration rate: 20
+Heart rate: 78
+----------------------- read: 776 ms / cycle: 1691 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 9
+Respiration rate: 20
+Heart rate: 78
+----------------------- read: 626 ms / cycle: 1776 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 14
+Respiration rate: 21
+Heart rate: 78
+----------------------- read: 701 ms / cycle: 1626 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 15
+Respiration rate: 21
+Heart rate: 79
+----------------------- read: 806 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 3
+Respiration rate: 20
+Heart rate: 79
+----------------------- read: 486 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 4
+Respiration rate: 20
+Heart rate: 82
+----------------------- read: 921 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 10
+Respiration rate: 20
+Heart rate: 82
+----------------------- read: 691 ms / cycle: 1921 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 12
+Respiration rate: 20
+Heart rate: 82
+----------------------- read: 701 ms / cycle: 1691 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 5
+Respiration rate: 20
+Heart rate: 81
+----------------------- read: 696 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 3
+Respiration rate: 20
+Heart rate: 81
+----------------------- read: 706 ms / cycle: 1696 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 7
+Respiration rate: 20
+Heart rate: 81
+----------------------- read: 801 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 7
+Respiration rate: 20
+Heart rate: 81
+----------------------- read: 486 ms / cycle: 1801 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 24
+Respiration rate: 20
+Heart rate: 81
+----------------------- read: 711 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 27
+Respiration rate: 20
+Heart rate: 81
+----------------------- read: 596 ms / cycle: 1711 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 9
+Respiration rate: 20
+Heart rate: 81
+----------------------- read: 706 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 5
+Respiration rate: 20
+Heart rate: 81
+----------------------- read: 911 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 3
+Respiration rate: 20
+Heart rate: 81
+----------------------- read: 691 ms / cycle: 1911 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 11
+Respiration rate: 20
+Heart rate: 81
+----------------------- read: 701 ms / cycle: 1691 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 54
+Respiration rate: 19
+Heart rate: 81
+----------------------- read: 596 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 6
+Respiration rate: 19
+Heart rate: 81
+----------------------- read: 706 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 7
+Respiration rate: 18
+Heart rate: 81
+----------------------- read: 491 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 12
+Respiration rate: 18
+Heart rate: 81
+----------------------- read: 816 ms / cycle: 1491 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 32
+Respiration rate: 18
+Heart rate: 81
+----------------------- read: 696 ms / cycle: 1816 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 35
+Respiration rate: 18
+Heart rate: 81
+----------------------- read: 696 ms / cycle: 1696 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 9
+Respiration rate: 18
+Heart rate: 81
+----------------------- read: 706 ms / cycle: 1696 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 95
+Respiration rate: 16
+Heart rate: 81
+----------------------- read: 701 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 1
+Respiration rate: 16
+Heart rate: 81
+----------------------- read: 801 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 11
+Respiration rate: 14
+Heart rate: 81
+----------------------- read: 491 ms / cycle: 1801 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 5
+Respiration rate: 14
+Heart rate: 81
+----------------------- read: 711 ms / cycle: 1491 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 13
+Respiration rate: 13
+Heart rate: 81
+----------------------- read: 591 ms / cycle: 1711 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 10
+Respiration rate: 13
+Heart rate: 81
+----------------------- read: 706 ms / cycle: 1591 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 51
+Respiration rate: 13
+Heart rate: 81
+----------------------- read: 701 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 42
+Respiration rate: 15
+Heart rate: 81
+----------------------- read: 806 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 50
+Respiration rate: 15
+Heart rate: 83
+----------------------- read: 591 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 10
+Respiration rate: 17
+Heart rate: 83
+----------------------- read: 706 ms / cycle: 1591 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 17
+Respiration rate: 17
+Heart rate: 106
+----------------------- read: 811 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 22
+Respiration rate: 23
+Heart rate: 106
+----------------------- read: 481 ms / cycle: 1811 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 10
+Respiration rate: 23
+Heart rate: 109
+----------------------- read: 816 ms / cycle: 1481 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 19
+Respiration rate: 23
+Heart rate: 109
+----------------------- read: 696 ms / cycle: 1816 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 10
+Respiration rate: 23
+Heart rate: 112
+----------------------- read: 701 ms / cycle: 1696 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 47
+Respiration rate: 23
+Heart rate: 115
+----------------------- read: 696 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 7
+Respiration rate: 23
+Heart rate: 115
+----------------------- read: 701 ms / cycle: 1696 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 17
+Respiration rate: 23
+Heart rate: 118
+----------------------- read: 806 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 11
+Respiration rate: 24
+Heart rate: 118
+----------------------- read: 491 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 2
+Respiration rate: 24
+Heart rate: 121
+----------------------- read: 706 ms / cycle: 1491 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 4
+Respiration rate: 24
+Heart rate: 121
+----------------------- read: 596 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 20
+Respiration rate: 24
+Heart rate: 124
+----------------------- read: 706 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 21
+Respiration rate: 24
+Heart rate: 124
+----------------------- read: 701 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 51
+Respiration rate: 24
+Heart rate: 125
+----------------------- read: 806 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 34
+Respiration rate: 24
+Heart rate: 126
+----------------------- read: 591 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 48
+Respiration rate: 23
+Heart rate: 126
+----------------------- read: 706 ms / cycle: 1591 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 5
+Respiration rate: 23
+Heart rate: 108
+----------------------- read: 706 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 3
+Respiration rate: 24
+Heart rate: 108
+----------------------- read: 486 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 5
+Respiration rate: 24
+Heart rate: 111
+----------------------- read: 711 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 13
+Respiration rate: 23
+Heart rate: 111
+----------------------- read: 596 ms / cycle: 1711 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 7
+Respiration rate: 23
+Heart rate: 114
+----------------------- read: 701 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 6
+Respiration rate: 23
+Heart rate: 114
+----------------------- read: 701 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 20
+Respiration rate: 23
+Heart rate: 117
+----------------------- read: 806 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 20
+Respiration rate: 23
+Heart rate: 120
+----------------------- read: 591 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 16
+Respiration rate: 24
+Heart rate: 120
+----------------------- read: 706 ms / cycle: 1591 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 37
+Respiration rate: 24
+Heart rate: 106
+----------------------- read: 706 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 17
+Respiration rate: 23
+Heart rate: 106
+----------------------- read: 486 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 7
+Respiration rate: 23
+Heart rate: 109
+----------------------- read: 711 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 15
+Respiration rate: 23
+Heart rate: 109
+----------------------- read: 596 ms / cycle: 1711 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 5
+Respiration rate: 24
+Heart rate: 112
+----------------------- read: 706 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 7
+Respiration rate: 24
+Heart rate: 112
+----------------------- read: 701 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 5
+Respiration rate: 23
+Heart rate: 115
+----------------------- read: 806 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 7
+Respiration rate: 23
+Heart rate: 118
+----------------------- read: 591 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 6
+Respiration rate: 23
+Heart rate: 118
+----------------------- read: 706 ms / cycle: 1591 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 7
+Respiration rate: 23
+Heart rate: 121
+----------------------- read: 701 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 6
+Respiration rate: 24
+Heart rate: 121
+----------------------- read: 491 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 1
+Respiration rate: 24
+Heart rate: 118
+----------------------- read: 896 ms / cycle: 1491 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 24
+Heart rate: 118
+----------------------- read: 821 ms / cycle: 1896 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 5
+Respiration rate: 23
+Heart rate: 112
+----------------------- read: 866 ms / cycle: 1821 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 2
+Respiration rate: 23
+Heart rate: 106
+----------------------- read: 726 ms / cycle: 1866 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 3
+Respiration rate: 23
+Heart rate: 106
+----------------------- read: 596 ms / cycle: 1726 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 2
+Respiration rate: 23
+Heart rate: 100
+----------------------- read: 706 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 8
+Respiration rate: 22
+Heart rate: 100
+----------------------- read: 596 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 14
+Respiration rate: 22
+Heart rate: 94
+----------------------- read: 717 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 2
+Respiration rate: 23
+Heart rate: 94
+----------------------- read: 691 ms / cycle: 1717 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 14
+Respiration rate: 23
+Heart rate: 89
+----------------------- read: 701 ms / cycle: 1691 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 1
+Respiration rate: 23
+Heart rate: 88
+----------------------- read: 701 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 12
+Respiration rate: 22
+Heart rate: 88
+----------------------- read: 696 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 62
+Respiration rate: 22
+Heart rate: 87
+----------------------- read: 806 ms / cycle: 1696 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 17
+Respiration rate: 20
+Heart rate: 87
+----------------------- read: 491 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 12
+Respiration rate: 20
+Heart rate: 85
+----------------------- read: 706 ms / cycle: 1491 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 18
+Respiration rate: 20
+Heart rate: 85
+----------------------- read: 596 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 31
+Respiration rate: 21
+Heart rate: 81
+----------------------- read: 706 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 10
+Respiration rate: 21
+Heart rate: 81
+----------------------- read: 701 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 13
+Respiration rate: 20
+Heart rate: 78
+----------------------- read: 806 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 9
+Respiration rate: 20
+Heart rate: 75
+----------------------- read: 591 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 3
+Respiration rate: 19
+Heart rate: 75
+----------------------- read: 706 ms / cycle: 1591 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 8
+Respiration rate: 19
+Heart rate: 73
+----------------------- read: 806 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 9
+Respiration rate: 18
+Heart rate: 73
+----------------------- read: 486 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 5
+Respiration rate: 18
+Heart rate: 73
+----------------------- read: 816 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 12
+Respiration rate: 18
+Heart rate: 73
+----------------------- read: 696 ms / cycle: 1816 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 1
+Respiration rate: 18
+Heart rate: 73
+----------------------- read: 696 ms / cycle: 1696 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 6
+Respiration rate: 18
+Heart rate: 76
+----------------------- read: 701 ms / cycle: 1696 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 1
+Respiration rate: 17
+Heart rate: 76
+----------------------- read: 701 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 8
+Respiration rate: 17
+Heart rate: 79
+----------------------- read: 806 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 2
+Respiration rate: 17
+Heart rate: 79
+----------------------- read: 486 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 3
+Respiration rate: 17
+Heart rate: 77
+----------------------- read: 711 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 10
+Respiration rate: 17
+Heart rate: 77
+----------------------- read: 596 ms / cycle: 1711 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 5
+Respiration rate: 17
+Heart rate: 74
+----------------------- read: 706 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 1
+Respiration rate: 17
+Heart rate: 74
+----------------------- read: 701 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 3
+Respiration rate: 17
+Heart rate: 71
+----------------------- read: 806 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 3
+Respiration rate: 17
+Heart rate: 70
+----------------------- read: 906 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 2
+Respiration rate: 17
+Heart rate: 70
+----------------------- read: 486 ms / cycle: 1906 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 4
+Respiration rate: 17
+Heart rate: 67
+----------------------- read: 706 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 17
+Heart rate: 67
+----------------------- read: 592 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 1
+Respiration rate: 17
+Heart rate: 66
+----------------------- read: 712 ms / cycle: 1592 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 4
+Respiration rate: 17
+Heart rate: 66
+----------------------- read: 1011 ms / cycle: 1712 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 2
+Respiration rate: 17
+Heart rate: 66
+----------------------- read: 686 ms / cycle: 2011 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 23
+Respiration rate: 17
+Heart rate: 66
+----------------------- read: 701 ms / cycle: 1686 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 2
+Respiration rate: 17
+Heart rate: 66
+----------------------- read: 596 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 7
+Respiration rate: 17
+Heart rate: 66
+----------------------- read: 706 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 5
+Respiration rate: 17
+Heart rate: 66
+----------------------- read: 491 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 5
+Respiration rate: 17
+Heart rate: 65
+----------------------- read: 816 ms / cycle: 1491 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 4
+Respiration rate: 17
+Heart rate: 65
+----------------------- read: 696 ms / cycle: 1816 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 6
+Respiration rate: 17
+Heart rate: 65
+----------------------- read: 701 ms / cycle: 1696 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 9
+Respiration rate: 17
+Heart rate: 65
+----------------------- read: 701 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 3
+Respiration rate: 17
+Heart rate: 65
+----------------------- read: 801 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 3
+Respiration rate: 17
+Heart rate: 65
+----------------------- read: 806 ms / cycle: 1801 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 3
+Respiration rate: 17
+Heart rate: 65
+----------------------- read: 486 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 2
+Respiration rate: 17
+Heart rate: 65
+----------------------- read: 816 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 17
+Heart rate: 65
+----------------------- read: 796 ms / cycle: 1816 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 1
+Respiration rate: 18
+Heart rate: 64
+----------------------- read: 801 ms / cycle: 1796 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 1
+Respiration rate: 18
+Heart rate: 64
+----------------------- read: 591 ms / cycle: 1801 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 3
+Respiration rate: 19
+Heart rate: 64
+----------------------- read: 706 ms / cycle: 1591 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 1
+Respiration rate: 19
+Heart rate: 64
+----------------------- read: 706 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 2
+Respiration rate: 20
+Heart rate: 64
+----------------------- read: 486 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 3
+Respiration rate: 20
+Heart rate: 64
+----------------------- read: 916 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 2
+Respiration rate: 21
+Heart rate: 64
+----------------------- read: 801 ms / cycle: 1916 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 3
+Respiration rate: 21
+Heart rate: 64
+----------------------- read: 796 ms / cycle: 1801 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 2
+Respiration rate: 21
+Heart rate: 64
+----------------------- read: 701 ms / cycle: 1796 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 3
+Respiration rate: 20
+Heart rate: 64
+----------------------- read: 602 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 5
+Respiration rate: 20
+Heart rate: 64
+----------------------- read: 806 ms / cycle: 1602 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 20
+Heart rate: 64
+----------------------- read: 587 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 2
+Respiration rate: 20
+Heart rate: 64
+----------------------- read: 711 ms / cycle: 1587 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 5
+Respiration rate: 19
+Heart rate: 64
+----------------------- read: 696 ms / cycle: 1711 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 4
+Respiration rate: 19
+Heart rate: 64
+----------------------- read: 701 ms / cycle: 1696 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 4
+Respiration rate: 19
+Heart rate: 64
+----------------------- read: 806 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 18
+Heart rate: 64
+----------------------- read: 802 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 2
+Respiration rate: 18
+Heart rate: 67
+----------------------- read: 696 ms / cycle: 1802 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 11
+Respiration rate: 18
+Heart rate: 67
+----------------------- read: 486 ms / cycle: 1696 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 4
+Respiration rate: 18
+Heart rate: 70
+----------------------- read: 816 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 8
+Respiration rate: 17
+Heart rate: 70
+----------------------- read: 806 ms / cycle: 1816 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 4
+Respiration rate: 19
+Heart rate: 73
+----------------------- read: 796 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 3
+Respiration rate: 19
+Heart rate: 76
+----------------------- read: 696 ms / cycle: 1796 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 2
+Respiration rate: 20
+Heart rate: 76
+----------------------- read: 607 ms / cycle: 1696 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 4
+Respiration rate: 20
+Heart rate: 77
+----------------------- read: 701 ms / cycle: 1607 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 7
+Respiration rate: 20
+Heart rate: 77
+----------------------- read: 486 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 19
+Respiration rate: 20
+Heart rate: 77
+----------------------- read: 711 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 40
+Respiration rate: 20
+Heart rate: 77
+----------------------- read: 596 ms / cycle: 1711 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 4
+Respiration rate: 21
+Heart rate: 77
+----------------------- read: 701 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 1
+Respiration rate: 21
+Heart rate: 77
+----------------------- read: 701 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 1
+Respiration rate: 19
+Heart rate: 80
+----------------------- read: 911 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 19
+Heart rate: 83
+----------------------- read: 691 ms / cycle: 1911 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 1
+Respiration rate: 20
+Heart rate: 83
+----------------------- read: 596 ms / cycle: 1691 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 4
+Respiration rate: 20
+Heart rate: 80
+----------------------- read: 1032 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 1
+Respiration rate: 21
+Heart rate: 80
+----------------------- read: 786 ms / cycle: 2032 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 2
+Respiration rate: 22
+Heart rate: 77
+----------------------- read: 796 ms / cycle: 1786 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 1
+Respiration rate: 22
+Heart rate: 77
+----------------------- read: 591 ms / cycle: 1796 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 1
+Respiration rate: 22
+Heart rate: 77
+----------------------- read: 706 ms / cycle: 1591 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 1
+Respiration rate: 22
+Heart rate: 77
+----------------------- read: 706 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 1
+Respiration rate: 23
+Heart rate: 77
+----------------------- read: 486 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 23
+Heart rate: 79
+----------------------- read: 706 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 9
+Respiration rate: 22
+Heart rate: 79
+----------------------- read: 601 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 22
+Heart rate: 82
+----------------------- read: 717 ms / cycle: 1601 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 2
+Respiration rate: 22
+Heart rate: 82
+----------------------- read: 686 ms / cycle: 1717 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 2
+Respiration rate: 23
+Heart rate: 83
+----------------------- read: 1016 ms / cycle: 1686 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 1
+Respiration rate: 23
+Heart rate: 84
+----------------------- read: 791 ms / cycle: 2016 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 2
+Respiration rate: 23
+Heart rate: 84
+----------------------- read: 486 ms / cycle: 1791 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 2
+Respiration rate: 23
+Heart rate: 84
+----------------------- read: 917 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 1
+Respiration rate: 21
+Heart rate: 84
+----------------------- read: 696 ms / cycle: 1917 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 1
+Respiration rate: 21
+Heart rate: 79
+----------------------- read: 701 ms / cycle: 1696 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 4
+Respiration rate: 21
+Heart rate: 76
+----------------------- read: 696 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 5
+Respiration rate: 21
+Heart rate: 76
+----------------------- read: 806 ms / cycle: 1696 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 2
+Respiration rate: 21
+Heart rate: 75
+----------------------- read: 806 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 2
+Respiration rate: 21
+Heart rate: 75
+----------------------- read: 481 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 3
+Respiration rate: 21
+Heart rate: 78
+----------------------- read: 816 ms / cycle: 1481 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 4
+Respiration rate: 21
+Heart rate: 78
+----------------------- read: 696 ms / cycle: 1816 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 2
+Respiration rate: 22
+Heart rate: 81
+----------------------- read: 701 ms / cycle: 1696 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 18
+Respiration rate: 22
+Heart rate: 83
+----------------------- read: 701 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 2
+Respiration rate: 22
+Heart rate: 83
+----------------------- read: 806 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 22
+Heart rate: 83
+----------------------- read: 806 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 2
+Respiration rate: 23
+Heart rate: 83
+----------------------- read: 586 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 23
+Heart rate: 83
+----------------------- read: 816 ms / cycle: 1586 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 2
+Respiration rate: 23
+Heart rate: 83
+----------------------- read: 1001 ms / cycle: 1816 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 23
+Heart rate: 83
+----------------------- read: 691 ms / cycle: 2001 ms
+Existing information:Someone is present
+Motion information:Still
+Body movement parameters: 1
+Respiration rate: 23
+Heart rate: 83
+----------------------- read: 801 ms / cycle: 1691 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 5
+Respiration rate: 23
+Heart rate: 83
+----------------------- read: 491 ms / cycle: 1801 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 8
+Respiration rate: 23
+Heart rate: 83
+----------------------- read: 706 ms / cycle: 1491 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 2
+Respiration rate: 23
+Heart rate: 83
+----------------------- read: 596 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 9
+Respiration rate: 24
+Heart rate: 83
+----------------------- read: 706 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 24
+Respiration rate: 24
+Heart rate: 83
+----------------------- read: 701 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 16
+Respiration rate: 23
+Heart rate: 83
+----------------------- read: 806 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 53
+Respiration rate: 23
+Heart rate: 83
+----------------------- read: 591 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 20
+Respiration rate: 23
+Heart rate: 83
+----------------------- read: 706 ms / cycle: 1591 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 13
+Respiration rate: 23
+Heart rate: 107
+----------------------- read: 706 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 10
+Respiration rate: 24
+Heart rate: 107
+----------------------- read: 486 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 12
+Respiration rate: 24
+Heart rate: 110
+----------------------- read: 711 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 20
+Respiration rate: 23
+Heart rate: 110
+----------------------- read: 596 ms / cycle: 1711 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 28
+Respiration rate: 23
+Heart rate: 113
+----------------------- read: 706 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 46
+Respiration rate: 23
+Heart rate: 113
+----------------------- read: 701 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 28
+Respiration rate: 23
+Heart rate: 116
+----------------------- read: 801 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 23
+Respiration rate: 23
+Heart rate: 119
+----------------------- read: 596 ms / cycle: 1801 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 4
+Respiration rate: 23
+Heart rate: 119
+----------------------- read: 701 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 11
+Respiration rate: 23
+Heart rate: 119
+----------------------- read: 706 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 17
+Respiration rate: 22
+Heart rate: 119
+----------------------- read: 491 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 8
+Respiration rate: 22
+Heart rate: 113
+----------------------- read: 706 ms / cycle: 1491 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 3
+Respiration rate: 21
+Heart rate: 113
+----------------------- read: 806 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 23
+Respiration rate: 20
+Heart rate: 107
+----------------------- read: 591 ms / cycle: 1806 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 7
+Respiration rate: 20
+Heart rate: 101
+----------------------- read: 811 ms / cycle: 1591 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 16
+Respiration rate: 20
+Heart rate: 101
+----------------------- read: 776 ms / cycle: 1811 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 15
+Respiration rate: 20
+Heart rate: 95
+----------------------- read: 826 ms / cycle: 1776 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 31
+Respiration rate: 19
+Heart rate: 95
+----------------------- read: 486 ms / cycle: 1826 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 6
+Respiration rate: 19
+Heart rate: 92
+----------------------- read: 711 ms / cycle: 1486 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 20
+Respiration rate: 18
+Heart rate: 92
+----------------------- read: 596 ms / cycle: 1711 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 13
+Respiration rate: 18
+Heart rate: 89
+----------------------- read: 706 ms / cycle: 1596 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 6
+Respiration rate: 18
+Heart rate: 89
+----------------------- read: 701 ms / cycle: 1706 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 20
+Respiration rate: 18
+Heart rate: 86
+----------------------- read: 801 ms / cycle: 1701 ms
+Existing information:Someone is present
+Motion information:Active
+Body movement parameters: 14
+Respiration rate: 18
+Heart rate: 81
+----------------------- read: 591 ms / cycle: 1801 ms
